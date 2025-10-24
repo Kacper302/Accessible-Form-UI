@@ -97,3 +97,16 @@ input[type="submit"]{
 .error{
     color: red;
 }
+.password{
+    display: flex;
+    
+}
+.password button{
+    background-color: transparent;
+    border: none;
+    line-height: 50px;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 15px;
+    transform: translateX(-175%);
+}
