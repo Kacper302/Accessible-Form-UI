@@ -10,7 +10,7 @@ body{
     align-items: center;
     height: 100vh;
 }
-#container{
+#form-container{
     background-color: #f0f0f0;
      width: 700px;
     padding: 40px;
@@ -46,6 +46,11 @@ input[type="password"]
     border: 1px solid #ccc;
     border-radius: 4px;
     background-color: #f9f9f9;
+    &:focus{
+        border-color: #f71d1d;
+        outline: none;
+        box-shadow: 0 0 7px rgba(17,17,17,0.5);
+    }
 }
 input[type="submit"]{
     padding: 15px 0;
@@ -66,5 +71,29 @@ input[type="submit"]{
     text-align: center;
     line-height: 130px;
     
-    float: left;
+
+}
+#container{
+    display: flex;
+}
+#taskList{
+    margin-top: 20px;
+    background-color: rgb(243, 220, 190);
+    padding: 15px;
+    border-radius: 16px;
+    height: 300px;
+}
+#taskList li{
+    margin-bottom: 30px;
+    list-style-type: none;
+}
+ li:nth-child(1),li:nth-child(2),li:nth-child(3){
+    text-decoration: line-through;
+    &::before{
+        content: "✓ ";
+        color: green;
+    }
+}
+.error{
+    color: red;
 }
