@@ -52,7 +52,13 @@ input[type="password"]
         box-shadow: 0 0 7px rgba(17,17,17,0.5);
     }
 }
+
+input[type="password"]::-ms-reveal{
+    display: none;
+}
+
 input[type="submit"]{
+     font-weight: bolder;
     padding: 15px 0;
     width: 50%;
     background-color: #111111;
@@ -62,6 +68,12 @@ input[type="submit"]{
     cursor: pointer;
     font-size: 16px;
     transform: translateX(50%);
+    &:hover{
+        scale: 1.05;
+        transition: ease-in-out;
+        background-color: #383838;
+       
+    }
 }
 #circle{
     width: 150px;
@@ -108,5 +120,7 @@ input[type="submit"]{
     cursor: pointer;
     display: block;
     margin-bottom: 15px;
-    transform: translateX(-175%);
+    transform: translate(225px, -5px);
+    font-size: 1.1em;
+    position: fixed;
 }
